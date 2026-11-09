@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #f5ead6;
+  --color-terracotta: #c2562f;
+  --color-indigo: #12284a;
+  --color-gold: #d9a441;
+  --color-olive: #6b7a3a;
+  --color-crimson: #b3202a;
+  --color-turquoise: #2aa7a1;
+  --font-serif: "Cormorant Garamond", "Noto Serif Armenian", Georgia, serif;
+  --font-sans: "Inter", "Noto Sans Armenian", system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: #12284a; color: #f5ead6; font-family: var(--font-sans); }
+
+.glass {
+  background: rgba(245, 234, 214, 0.08);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(245, 234, 214, 0.18);
+  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.btn-3d {
+  background: linear-gradient(180deg, #e0703f, #c2562f);
+  color: #fff7e8;
+  border-radius: 9999px;
+  padding: 0.95rem 2.4rem;
+  letter-spacing: 0.18em;
+  font-weight: 500;
+  box-shadow: 0 6px 0 #8c3a1c, 0 18px 30px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-3d:hover { transform: translateY(-2px); box-shadow: 0 8px 0 #8c3a1c, 0 24px 36px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.35); }
+.btn-3d:active { transform: translateY(5px); box-shadow: 0 1px 0 #8c3a1c, 0 8px 14px rgba(0, 0, 0, 0.4); }
+:focus-visible { outline: 2px solid #d9a441; outline-offset: 3px; }
